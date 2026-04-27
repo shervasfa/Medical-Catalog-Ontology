@@ -1,0 +1,1514 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.uoc.edu/PEC2/med#"
+     xml:base="http://www.uoc.edu/PEC2/med"
+     xmlns:med="http://www.uoc.edu/PEC2/med#"
+     xmlns:mod="https://w3id.org/mod#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.uoc.edu/PEC2/med">
+        <terms:description xml:lang="en">Ontology for the medical device catalog</terms:description>
+        <terms:title xml:lang="en">Medical Catalog Ontology</terms:title>
+        <vann:preferredNamespacePrefix>med</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="http://www.uoc.edu/PEC2/med#"/>
+        <rdfs:comment xml:lang="en">Ontology for devices, incidents, risks, manufacturers and FSCAs.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medical Catalog Ontology</rdfs:label>
+        <owl:versionInfo>1.2</owl:versionInfo>
+        <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+    
+
+
+    <!-- https://w3id.org/mod#createdWith -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#createdWith"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#affectsDeviceType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#affectsDeviceType">
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:comment xml:lang="en">Links a risk to a device type.</rdfs:comment>
+        <rdfs:label xml:lang="en">affects device type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#hasDeviceType -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#hasDeviceType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:comment xml:lang="en">Links a device to a device type.</rdfs:comment>
+        <rdfs:label xml:lang="en">has device type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#hasFSCA -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#hasFSCA">
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:comment xml:lang="en">Links an incident to an FSCA.</rdfs:comment>
+        <rdfs:label xml:lang="en">has FSCA</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#hasManufacturer -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#hasManufacturer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:comment xml:lang="en">Links a device to a manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">has manufacturer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#hasRisk -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#hasRisk">
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <rdfs:comment xml:lang="en">Links an incident to a risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#involvesDevice -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#involvesDevice">
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">Links an incident to a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">involves device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#issuedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#issuedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Links an FSCA to an authority.</rdfs:comment>
+        <rdfs:label xml:lang="en">issued by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#locatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#locatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#Country"/>
+        <rdfs:comment xml:lang="en">Links a manufacturer to a country.</rdfs:comment>
+        <rdfs:label xml:lang="en">located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#mitigatesRisk -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#mitigatesRisk">
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <rdfs:comment xml:lang="en">Links an FSCA to a risk.</rdfs:comment>
+        <rdfs:label xml:lang="en">mitigates risk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#regulatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#regulatedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#CompetentAuthority"/>
+        <rdfs:comment xml:lang="en">Links a manufacturer to an authority.</rdfs:comment>
+        <rdfs:label xml:lang="en">regulated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#reportedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#reportedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:comment xml:lang="en">Links an incident to a manufacturer.</rdfs:comment>
+        <rdfs:label xml:lang="en">reported by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#targetsDevice -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.uoc.edu/PEC2/med#targetsDevice">
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:range rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">Links an FSCA to a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">targets device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#actionDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#actionDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Action date.</rdfs:comment>
+        <rdfs:label xml:lang="en">action date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#actionType -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#actionType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Action type value.</rdfs:comment>
+        <rdfs:label xml:lang="en">action type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#authorityName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#authorityName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#CompetentAuthority"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Authority name value.</rdfs:comment>
+        <rdfs:label xml:lang="en">authority name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#contactEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#contactEmail">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Contact email value.</rdfs:comment>
+        <rdfs:label xml:lang="en">contact email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#countryCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#countryCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Country code value.</rdfs:comment>
+        <rdfs:label xml:lang="en">country code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#countryName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#countryName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Country name value.</rdfs:comment>
+        <rdfs:label xml:lang="en">country name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#deviceId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#deviceId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Device id.</rdfs:comment>
+        <rdfs:label xml:lang="en">device id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#deviceName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#deviceName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Device name.</rdfs:comment>
+        <rdfs:label xml:lang="en">device name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#eudamedSRN -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#eudamedSRN">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">EUDAMED SRN value.</rdfs:comment>
+        <rdfs:label xml:lang="en">EUDAMED SRN</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#fscaId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#fscaId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">FSCA id.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#imdrfCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#imdrfCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.uoc.edu/PEC2/med#fscaId"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">IMDRF code value.</rdfs:comment>
+        <rdfs:label xml:lang="en">IMDRF code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#incidentId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#incidentId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Incident id.</rdfs:comment>
+        <rdfs:label xml:lang="en">incident id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#isActive -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#isActive">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Active flag.</rdfs:comment>
+        <rdfs:label xml:lang="en">is active</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#isImplantable -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#isImplantable">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Implantable flag.</rdfs:comment>
+        <rdfs:label xml:lang="en">is implantable</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#manufacturerId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#manufacturerId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Manufacturer id.</rdfs:comment>
+        <rdfs:label xml:lang="en">manufacturer id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#memberStateCode -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#memberStateCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#CompetentAuthority"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Member state code value.</rdfs:comment>
+        <rdfs:label xml:lang="en">member state code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.uoc.edu/PEC2/med#memberStateCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name value.</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#outcome -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#outcome">
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Outcome value.</rdfs:comment>
+        <rdfs:label xml:lang="en">outcome</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#probability -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#probability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Probability value.</rdfs:comment>
+        <rdfs:label xml:lang="en">probability</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#reportDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#reportDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment xml:lang="en">Report date.</rdfs:comment>
+        <rdfs:label xml:lang="en">report date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#riskClass -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#riskClass">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Risk class of a device.</rdfs:comment>
+        <rdfs:label xml:lang="en">risk class</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#riskId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#riskId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Risk id.</rdfs:comment>
+        <rdfs:label xml:lang="en">risk id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#riskName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#riskName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Risk name.</rdfs:comment>
+        <rdfs:label xml:lang="en">risk name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#scope -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#scope">
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Scope value.</rdfs:comment>
+        <rdfs:label xml:lang="en">scope</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#seriousness -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#seriousness">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Incident type value.</rdfs:comment>
+        <rdfs:label xml:lang="en">seriousness</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#severity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#severity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Severity value.</rdfs:comment>
+        <rdfs:label xml:lang="en">severity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#typeName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#typeName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Device type name.</rdfs:comment>
+        <rdfs:label xml:lang="en">type name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#udiDi -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.uoc.edu/PEC2/med#udiDi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">UDI-DI value.</rdfs:comment>
+        <rdfs:label xml:lang="en">UDI-DI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#ActiveDevice -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#ActiveDevice">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">Active medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#ActiveDeviceType -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#ActiveDeviceType">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:comment xml:lang="en">Device type class from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Device Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#ActiveImplantType -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#ActiveImplantType">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:comment xml:lang="en">Device type class from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Implant Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#CompetentAuthority -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#CompetentAuthority">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Authority from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Competent Authority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#Country -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#Country">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Country from the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#DeviceType -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#DeviceType">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#typeName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Device type from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#FSCA -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#FSCA">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#targetsDevice"/>
+                <owl:someValuesFrom rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#issuedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.uoc.edu/PEC2/med#CompetentAuthority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">FSCA from acciones_correctivas.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#HighRiskDevice -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#HighRiskDevice">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">High risk medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">High Risk Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#IVDDevice -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#IVDDevice">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">In vitro diagnostic device.</rdfs:comment>
+        <rdfs:label xml:lang="en">IVD Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:comment xml:lang="en">Device type class from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantable Active Device Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#ImplantableDevice -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#ImplantableDevice">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <rdfs:comment xml:lang="en">Implantable medical device.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantable Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#ImplantableDeviceType -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#ImplantableDeviceType">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:comment xml:lang="en">Device type class from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantable Device Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#InSituCorrectionFSCA -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#InSituCorrectionFSCA">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:comment xml:lang="en">In situ correction FSCA.</rdfs:comment>
+        <rdfs:label xml:lang="en">In Situ Correction FSCA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#InVitroDiagnosticDeviceType -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#InVitroDiagnosticDeviceType">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:comment xml:lang="en">Device type class from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">In Vitro Diagnostic Device Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#Incident -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#Incident">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#hasRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#involvesDevice"/>
+                <owl:someValuesFrom rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Incident from incidentes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#ManagedIncident -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#ManagedIncident">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:comment xml:lang="en">Incident linked to an FSCA.</rdfs:comment>
+        <rdfs:label xml:lang="en">Managed Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#Manufacturer -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#Manufacturer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#locatedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.uoc.edu/PEC2/med#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#regulatedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.uoc.edu/PEC2/med#CompetentAuthority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Manufacturer from the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Manufacturer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#MedicalDevice -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#MedicalDevice">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#hasDeviceType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#hasManufacturer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#deviceId"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.uoc.edu/PEC2/med#deviceName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Medical device from the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medical Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#NearMiss -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#NearMiss">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:comment xml:lang="en">Near miss incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">Near Miss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#RecallFSCA -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#RecallFSCA">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:comment xml:lang="en">Recall FSCA.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recall FSCA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#RegulatedEconomicOperator -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#RegulatedEconomicOperator">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <rdfs:comment xml:lang="en">Manufacturer linked to an authority.</rdfs:comment>
+        <rdfs:label xml:lang="en">Regulated Economic Operator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#Risk -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#Risk">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Risk from riesgos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#FSCA"/>
+        <rdfs:comment xml:lang="en">Safety notice FSCA.</rdfs:comment>
+        <rdfs:label xml:lang="en">Safety Notice FSCA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#SelfTestDeviceType -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#SelfTestDeviceType">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:comment xml:lang="en">Device type class from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Self Test Device Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#SeriousIncident -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#SeriousIncident">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+        <rdfs:comment xml:lang="en">Serious incident.</rdfs:comment>
+        <rdfs:label xml:lang="en">Serious Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#SingleUseDeviceType -->
+
+
+    <owl:Class rdf:about="http://www.uoc.edu/PEC2/med#SingleUseDeviceType">
+        <rdfs:subClassOf rdf:resource="http://www.uoc.edu/PEC2/med#DeviceType"/>
+        <rdfs:comment xml:lang="en">Device type class from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Single Use Device Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://dbpedia.org/resource/Germany -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Germany">
+        <owl:sameAs rdf:resource="http://www.uoc.edu/PEC2/med#germany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#germany -->
+
+
+    <rdf:Description rdf:about="http://www.uoc.edu/PEC2/med#germany"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ireland -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ireland">
+        <owl:sameAs rdf:resource="http://www.uoc.edu/PEC2/med#ireland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#ireland -->
+
+
+    <rdf:Description rdf:about="http://www.uoc.edu/PEC2/med#ireland"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Medtronic -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Medtronic">
+        <owl:sameAs rdf:resource="http://www.uoc.edu/PEC2/med#manufacturer_man001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#manufacturer_man001 -->
+
+
+    <rdf:Description rdf:about="http://www.uoc.edu/PEC2/med#manufacturer_man001"/>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#bfarm -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#bfarm">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#CompetentAuthority"/>
+        <authorityName>Bundesinstitut fuer Arzneimittel und Medizinprodukte BfArM</authorityName>
+        <memberStateCode>DE</memberStateCode>
+        <rdfs:comment xml:lang="en">Authority from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">BfArM</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#deviceType_activeDevice -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#deviceType_activeDevice">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#ActiveDeviceType"/>
+        <typeName>ActiveDevice</typeName>
+        <rdfs:comment xml:lang="en">Device type from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Device</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#deviceType_activeImplant -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#deviceType_activeImplant">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#ActiveImplantType"/>
+        <typeName>ActiveImplant</typeName>
+        <rdfs:comment xml:lang="en">Device type from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Implant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#deviceType_implantableActive -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#deviceType_implantableActive">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType"/>
+        <typeName>ImplantableActiveDevice</typeName>
+        <rdfs:comment xml:lang="en">Device type from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Implantable Active Device</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#device_dev001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#device_dev001">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#ActiveDevice"/>
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#ImplantableDevice"/>
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <hasDeviceType rdf:resource="http://www.uoc.edu/PEC2/med#deviceType_implantableActive"/>
+        <hasManufacturer rdf:resource="http://www.uoc.edu/PEC2/med#manufacturer_man001"/>
+        <deviceId>DEV-001</deviceId>
+        <deviceName>HeartMate 3 LVAD</deviceName>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <riskClass>ClassIII</riskClass>
+        <udiDi>0100380740009095</udiDi>
+        <rdfs:comment xml:lang="en">Device from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">HeartMate 3 LVAD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#device_dev023 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#device_dev023">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#ActiveDevice"/>
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#ImplantableDevice"/>
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#MedicalDevice"/>
+        <hasDeviceType rdf:resource="http://www.uoc.edu/PEC2/med#deviceType_activeImplant"/>
+        <hasManufacturer rdf:resource="http://www.uoc.edu/PEC2/med#manufacturer_man008"/>
+        <deviceId>DEV-023</deviceId>
+        <deviceName>Tivoli II Cochlear Implant</deviceName>
+        <isActive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isActive>
+        <isImplantable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isImplantable>
+        <riskClass>ClassIII</riskClass>
+        <udiDi>0104012099001023</udiDi>
+        <rdfs:comment xml:lang="en">Device from dispositivos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tivoli II Cochlear Implant</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#fsca_fsca001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#fsca_fsca001">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA"/>
+        <issuedBy rdf:resource="http://www.uoc.edu/PEC2/med#hpra"/>
+        <mitigatesRisk rdf:resource="http://www.uoc.edu/PEC2/med#risk_rsk003"/>
+        <targetsDevice rdf:resource="http://www.uoc.edu/PEC2/med#device_dev001"/>
+        <actionDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-01</actionDate>
+        <actionType>SafetyAlert</actionType>
+        <fscaId>FSCA-001</fscaId>
+        <scope>All HeartMate 3 LVAD units implanted since 2020</scope>
+        <rdfs:comment xml:lang="en">FSCA from acciones_correctivas.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">FSCA-001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#germany -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#germany">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#Country"/>
+        <countryCode>DE</countryCode>
+        <rdfs:comment xml:lang="en">Country from the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Germany</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#hpra -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#hpra">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#CompetentAuthority"/>
+        <authorityName>Health Products Regulatory Authority HPRA</authorityName>
+        <memberStateCode>IE</memberStateCode>
+        <rdfs:comment xml:lang="en">Authority from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Health Products Regulatory Authority</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#incident_inc001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#incident_inc001">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#SeriousIncident"/>
+        <hasFSCA rdf:resource="http://www.uoc.edu/PEC2/med#fsca_fsca001"/>
+        <hasRisk rdf:resource="http://www.uoc.edu/PEC2/med#risk_rsk003"/>
+        <involvesDevice rdf:resource="http://www.uoc.edu/PEC2/med#device_dev001"/>
+        <reportedBy rdf:resource="http://www.uoc.edu/PEC2/med#manufacturer_man001"/>
+        <incidentId>INC-001</incidentId>
+        <outcome>Serious patient injury - embolic stroke</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-15</reportDate>
+        <seriousness>SeriousIncident</seriousness>
+        <rdfs:comment xml:lang="en">Incident from incidentes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Incident INC-001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#incident_inc019 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#incident_inc019">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#NearMiss"/>
+        <hasRisk rdf:resource="http://www.uoc.edu/PEC2/med#risk_rsk001"/>
+        <involvesDevice rdf:resource="http://www.uoc.edu/PEC2/med#device_dev023"/>
+        <reportedBy rdf:resource="http://www.uoc.edu/PEC2/med#manufacturer_man008"/>
+        <incidentId>INC-019</incidentId>
+        <outcome>Near-miss - device not activated post-surgery</outcome>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-01</reportDate>
+        <seriousness>NearMissIncident</seriousness>
+        <rdfs:comment xml:lang="en">Incident from incidentes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Incident INC-019</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#ireland -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#ireland">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#Country"/>
+        <countryCode>IE</countryCode>
+        <rdfs:comment xml:lang="en">Country from the dataset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ireland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#manufacturer_man001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#manufacturer_man001">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <locatedIn rdf:resource="http://www.uoc.edu/PEC2/med#ireland"/>
+        <regulatedBy rdf:resource="http://www.uoc.edu/PEC2/med#hpra"/>
+        <contactEmail>regulatorymedtronic.com</contactEmail>
+        <countryName>Ireland</countryName>
+        <eudamedSRN>SRN-IE-MED-0001</eudamedSRN>
+        <manufacturerId>MAN-001</manufacturerId>
+        <name>Medtronic plc</name>
+        <rdfs:comment xml:lang="en">Manufacturer from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Medtronic plc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#manufacturer_man008 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#manufacturer_man008">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#Manufacturer"/>
+        <locatedIn rdf:resource="http://www.uoc.edu/PEC2/med#germany"/>
+        <regulatedBy rdf:resource="http://www.uoc.edu/PEC2/med#bfarm"/>
+        <contactEmail>regulatorybiotronik.com</contactEmail>
+        <countryName>Germany</countryName>
+        <eudamedSRN>SRN-DE-MED-0008</eudamedSRN>
+        <manufacturerId>MAN-008</manufacturerId>
+        <name>Biotronik SE Co. KG</name>
+        <rdfs:comment xml:lang="en">Manufacturer from fabricantes.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Biotronik SE Co. KG</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#risk_rsk001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#risk_rsk001">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <affectsDeviceType rdf:resource="http://www.uoc.edu/PEC2/med#deviceType_activeDevice"/>
+        <imdrfCode>A0101</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-001</riskId>
+        <riskName>Device failure - electrical</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Risk from riesgos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Device failure - electrical</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.uoc.edu/PEC2/med#risk_rsk003 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.uoc.edu/PEC2/med#risk_rsk003">
+        <rdf:type rdf:resource="http://www.uoc.edu/PEC2/med#Risk"/>
+        <affectsDeviceType rdf:resource="http://www.uoc.edu/PEC2/med#deviceType_implantableActive"/>
+        <imdrfCode>A0201</imdrfCode>
+        <probability>Low</probability>
+        <riskId>RSK-003</riskId>
+        <riskName>Thrombosis - device-related</riskName>
+        <severity>Critical</severity>
+        <rdfs:comment xml:lang="en">Risk from riesgos.csv.</rdfs:comment>
+        <rdfs:label xml:lang="en">Thrombosis - device-related</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:comment xml:lang="en">Description annotation property.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+        <rdfs:comment xml:lang="en">Title annotation property.</rdfs:comment>
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+        <rdfs:comment xml:lang="en">Preferred namespace prefix annotation property.</rdfs:comment>
+        <rdfs:label xml:lang="en">preferred namespace prefix</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+        <rdfs:comment xml:lang="en">Preferred namespace URI annotation property.</rdfs:comment>
+        <rdfs:label xml:lang="en">preferred namespace URI</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:comment xml:lang="en">Version annotation property.</rdfs:comment>
+        <rdfs:label xml:lang="en">version info</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#f">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.uoc.edu/PEC2/med#ImplantableDevice"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.uoc.edu/PEC2/med#ActiveDevice"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.uoc.edu/PEC2/med#HighRiskDevice"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.uoc.edu/PEC2/med#involvesDevice"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.uoc.edu/PEC2/med#HighRiskDevice"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.uoc.edu/PEC2/med#SeriousIncident"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.uoc.edu/PEC2/med#Incident"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.uoc.edu/PEC2/med#hasFSCA"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#f"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.uoc.edu/PEC2/med#ManagedIncident"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

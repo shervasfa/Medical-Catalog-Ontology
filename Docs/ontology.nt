@@ -1,0 +1,902 @@
+<http://www.uoc.edu/PEC2/med> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.uoc.edu/PEC2/med> <http://purl.org/dc/terms/description> "Ontology for the medical device catalog"@en .
+<http://www.uoc.edu/PEC2/med> <http://purl.org/dc/terms/title> "Medical Catalog Ontology"@en .
+<http://www.uoc.edu/PEC2/med> <http://purl.org/vocab/vann/preferredNamespacePrefix> "med" .
+<http://www.uoc.edu/PEC2/med> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.uoc.edu/PEC2/med#> .
+<http://www.uoc.edu/PEC2/med> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology for devices, incidents, risks, manufacturers and FSCAs."@en .
+<http://www.uoc.edu/PEC2/med> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Catalog Ontology"@en .
+<http://www.uoc.edu/PEC2/med> <http://www.w3.org/2002/07/owl#versionInfo> "1.2" .
+<http://www.uoc.edu/PEC2/med> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.uoc.edu/PEC2/med#affectsDeviceType
+<http://www.uoc.edu/PEC2/med#affectsDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#affectsDeviceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#affectsDeviceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#affectsDeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk to a device type."@en .
+<http://www.uoc.edu/PEC2/med#affectsDeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "affects device type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#hasDeviceType
+<http://www.uoc.edu/PEC2/med#hasDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#hasDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#hasDeviceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#hasDeviceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#hasDeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a device to a device type."@en .
+<http://www.uoc.edu/PEC2/med#hasDeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "has device type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#hasFSCA
+<http://www.uoc.edu/PEC2/med#hasFSCA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#hasFSCA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#hasFSCA> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#hasFSCA> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an incident to an FSCA."@en .
+<http://www.uoc.edu/PEC2/med#hasFSCA> <http://www.w3.org/2000/01/rdf-schema#label> "has FSCA"@en .
+# 
+# http://www.uoc.edu/PEC2/med#hasManufacturer
+<http://www.uoc.edu/PEC2/med#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a device to a manufacturer."@en .
+<http://www.uoc.edu/PEC2/med#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "has manufacturer"@en .
+# 
+# http://www.uoc.edu/PEC2/med#hasRisk
+<http://www.uoc.edu/PEC2/med#hasRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#hasRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#hasRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#hasRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an incident to a risk."@en .
+<http://www.uoc.edu/PEC2/med#hasRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has risk"@en .
+# 
+# http://www.uoc.edu/PEC2/med#involvesDevice
+<http://www.uoc.edu/PEC2/med#involvesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an incident to a device."@en .
+<http://www.uoc.edu/PEC2/med#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#label> "involves device"@en .
+# 
+# http://www.uoc.edu/PEC2/med#issuedBy
+<http://www.uoc.edu/PEC2/med#issuedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#issuedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#issuedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#issuedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#CompetentAuthority> .
+<http://www.uoc.edu/PEC2/med#issuedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an FSCA to an authority."@en .
+<http://www.uoc.edu/PEC2/med#issuedBy> <http://www.w3.org/2000/01/rdf-schema#label> "issued by"@en .
+# 
+# http://www.uoc.edu/PEC2/med#locatedIn
+<http://www.uoc.edu/PEC2/med#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#Country> .
+<http://www.uoc.edu/PEC2/med#locatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a manufacturer to a country."@en .
+<http://www.uoc.edu/PEC2/med#locatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "located in"@en .
+# 
+# http://www.uoc.edu/PEC2/med#mitigatesRisk
+<http://www.uoc.edu/PEC2/med#mitigatesRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#mitigatesRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#mitigatesRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#mitigatesRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an FSCA to a risk."@en .
+<http://www.uoc.edu/PEC2/med#mitigatesRisk> <http://www.w3.org/2000/01/rdf-schema#label> "mitigates risk"@en .
+# 
+# http://www.uoc.edu/PEC2/med#regulatedBy
+<http://www.uoc.edu/PEC2/med#regulatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#regulatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#regulatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#regulatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#CompetentAuthority> .
+<http://www.uoc.edu/PEC2/med#regulatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a manufacturer to an authority."@en .
+<http://www.uoc.edu/PEC2/med#regulatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "regulated by"@en .
+# 
+# http://www.uoc.edu/PEC2/med#reportedBy
+<http://www.uoc.edu/PEC2/med#reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#reportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#reportedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#reportedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#reportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an incident to a manufacturer."@en .
+<http://www.uoc.edu/PEC2/med#reportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "reported by"@en .
+# 
+# http://www.uoc.edu/PEC2/med#targetsDevice
+<http://www.uoc.edu/PEC2/med#targetsDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.uoc.edu/PEC2/med#targetsDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#targetsDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#targetsDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an FSCA to a device."@en .
+<http://www.uoc.edu/PEC2/med#targetsDevice> <http://www.w3.org/2000/01/rdf-schema#label> "targets device"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.uoc.edu/PEC2/med#actionDate
+<http://www.uoc.edu/PEC2/med#actionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#actionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#actionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#actionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.uoc.edu/PEC2/med#actionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Action date."@en .
+<http://www.uoc.edu/PEC2/med#actionDate> <http://www.w3.org/2000/01/rdf-schema#label> "action date"@en .
+# 
+# http://www.uoc.edu/PEC2/med#actionType
+<http://www.uoc.edu/PEC2/med#actionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#actionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#actionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#actionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#actionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Action type value."@en .
+<http://www.uoc.edu/PEC2/med#actionType> <http://www.w3.org/2000/01/rdf-schema#label> "action type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#authorityName
+<http://www.uoc.edu/PEC2/med#authorityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#authorityName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#authorityName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#CompetentAuthority> .
+<http://www.uoc.edu/PEC2/med#authorityName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#authorityName> <http://www.w3.org/2000/01/rdf-schema#comment> "Authority name value."@en .
+<http://www.uoc.edu/PEC2/med#authorityName> <http://www.w3.org/2000/01/rdf-schema#label> "authority name"@en .
+# 
+# http://www.uoc.edu/PEC2/med#contactEmail
+<http://www.uoc.edu/PEC2/med#contactEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#contactEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#contactEmail> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#contactEmail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#contactEmail> <http://www.w3.org/2000/01/rdf-schema#comment> "Contact email value."@en .
+<http://www.uoc.edu/PEC2/med#contactEmail> <http://www.w3.org/2000/01/rdf-schema#label> "contact email"@en .
+# 
+# http://www.uoc.edu/PEC2/med#countryCode
+<http://www.uoc.edu/PEC2/med#countryCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#countryCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#countryCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Country> .
+<http://www.uoc.edu/PEC2/med#countryCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#countryCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Country code value."@en .
+<http://www.uoc.edu/PEC2/med#countryCode> <http://www.w3.org/2000/01/rdf-schema#label> "country code"@en .
+# 
+# http://www.uoc.edu/PEC2/med#countryName
+<http://www.uoc.edu/PEC2/med#countryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#countryName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#countryName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#countryName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#countryName> <http://www.w3.org/2000/01/rdf-schema#comment> "Country name value."@en .
+<http://www.uoc.edu/PEC2/med#countryName> <http://www.w3.org/2000/01/rdf-schema#label> "country name"@en .
+# 
+# http://www.uoc.edu/PEC2/med#deviceId
+<http://www.uoc.edu/PEC2/med#deviceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#deviceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#deviceId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#deviceId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#deviceId> <http://www.w3.org/2000/01/rdf-schema#comment> "Device id."@en .
+<http://www.uoc.edu/PEC2/med#deviceId> <http://www.w3.org/2000/01/rdf-schema#label> "device id"@en .
+# 
+# http://www.uoc.edu/PEC2/med#deviceName
+<http://www.uoc.edu/PEC2/med#deviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#deviceName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#deviceName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#deviceName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#deviceName> <http://www.w3.org/2000/01/rdf-schema#comment> "Device name."@en .
+<http://www.uoc.edu/PEC2/med#deviceName> <http://www.w3.org/2000/01/rdf-schema#label> "device name"@en .
+# 
+# http://www.uoc.edu/PEC2/med#eudamedSRN
+<http://www.uoc.edu/PEC2/med#eudamedSRN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#eudamedSRN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#eudamedSRN> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#eudamedSRN> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#eudamedSRN> <http://www.w3.org/2000/01/rdf-schema#comment> "EUDAMED SRN value."@en .
+<http://www.uoc.edu/PEC2/med#eudamedSRN> <http://www.w3.org/2000/01/rdf-schema#label> "EUDAMED SRN"@en .
+# 
+# http://www.uoc.edu/PEC2/med#fscaId
+<http://www.uoc.edu/PEC2/med#fscaId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#fscaId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#fscaId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#fscaId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#fscaId> <http://www.w3.org/2000/01/rdf-schema#comment> "FSCA id."@en .
+<http://www.uoc.edu/PEC2/med#fscaId> <http://www.w3.org/2000/01/rdf-schema#label> "FSCA id"@en .
+# 
+# http://www.uoc.edu/PEC2/med#imdrfCode
+<http://www.uoc.edu/PEC2/med#imdrfCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.uoc.edu/PEC2/med#fscaId> .
+<http://www.uoc.edu/PEC2/med#imdrfCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#comment> "IMDRF code value."@en .
+<http://www.uoc.edu/PEC2/med#imdrfCode> <http://www.w3.org/2000/01/rdf-schema#label> "IMDRF code"@en .
+# 
+# http://www.uoc.edu/PEC2/med#incidentId
+<http://www.uoc.edu/PEC2/med#incidentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#incidentId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#incidentId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#incidentId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#incidentId> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident id."@en .
+<http://www.uoc.edu/PEC2/med#incidentId> <http://www.w3.org/2000/01/rdf-schema#label> "incident id"@en .
+# 
+# http://www.uoc.edu/PEC2/med#isActive
+<http://www.uoc.edu/PEC2/med#isActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#isActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#isActive> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#isActive> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.uoc.edu/PEC2/med#isActive> <http://www.w3.org/2000/01/rdf-schema#comment> "Active flag."@en .
+<http://www.uoc.edu/PEC2/med#isActive> <http://www.w3.org/2000/01/rdf-schema#label> "is active"@en .
+# 
+# http://www.uoc.edu/PEC2/med#isImplantable
+<http://www.uoc.edu/PEC2/med#isImplantable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#isImplantable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#isImplantable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#isImplantable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.uoc.edu/PEC2/med#isImplantable> <http://www.w3.org/2000/01/rdf-schema#comment> "Implantable flag."@en .
+<http://www.uoc.edu/PEC2/med#isImplantable> <http://www.w3.org/2000/01/rdf-schema#label> "is implantable"@en .
+# 
+# http://www.uoc.edu/PEC2/med#manufacturerId
+<http://www.uoc.edu/PEC2/med#manufacturerId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#manufacturerId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#manufacturerId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#manufacturerId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#manufacturerId> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturer id."@en .
+<http://www.uoc.edu/PEC2/med#manufacturerId> <http://www.w3.org/2000/01/rdf-schema#label> "manufacturer id"@en .
+# 
+# http://www.uoc.edu/PEC2/med#memberStateCode
+<http://www.uoc.edu/PEC2/med#memberStateCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#memberStateCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#memberStateCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#CompetentAuthority> .
+<http://www.uoc.edu/PEC2/med#memberStateCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#memberStateCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Member state code value."@en .
+<http://www.uoc.edu/PEC2/med#memberStateCode> <http://www.w3.org/2000/01/rdf-schema#label> "member state code"@en .
+# 
+# http://www.uoc.edu/PEC2/med#name
+<http://www.uoc.edu/PEC2/med#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.uoc.edu/PEC2/med#memberStateCode> .
+<http://www.uoc.edu/PEC2/med#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name value."@en .
+<http://www.uoc.edu/PEC2/med#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# http://www.uoc.edu/PEC2/med#outcome
+<http://www.uoc.edu/PEC2/med#outcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#outcome> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#outcome> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#outcome> <http://www.w3.org/2000/01/rdf-schema#comment> "Outcome value."@en .
+<http://www.uoc.edu/PEC2/med#outcome> <http://www.w3.org/2000/01/rdf-schema#label> "outcome"@en .
+# 
+# http://www.uoc.edu/PEC2/med#probability
+<http://www.uoc.edu/PEC2/med#probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#probability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#probability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability value."@en .
+<http://www.uoc.edu/PEC2/med#probability> <http://www.w3.org/2000/01/rdf-schema#label> "probability"@en .
+# 
+# http://www.uoc.edu/PEC2/med#reportDate
+<http://www.uoc.edu/PEC2/med#reportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#reportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#reportDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#reportDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.uoc.edu/PEC2/med#reportDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Report date."@en .
+<http://www.uoc.edu/PEC2/med#reportDate> <http://www.w3.org/2000/01/rdf-schema#label> "report date"@en .
+# 
+# http://www.uoc.edu/PEC2/med#riskClass
+<http://www.uoc.edu/PEC2/med#riskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#riskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#riskClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#riskClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#riskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk class of a device."@en .
+<http://www.uoc.edu/PEC2/med#riskClass> <http://www.w3.org/2000/01/rdf-schema#label> "risk class"@en .
+# 
+# http://www.uoc.edu/PEC2/med#riskId
+<http://www.uoc.edu/PEC2/med#riskId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#riskId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#riskId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#riskId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#riskId> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk id."@en .
+<http://www.uoc.edu/PEC2/med#riskId> <http://www.w3.org/2000/01/rdf-schema#label> "risk id"@en .
+# 
+# http://www.uoc.edu/PEC2/med#riskName
+<http://www.uoc.edu/PEC2/med#riskName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#riskName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#riskName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#riskName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#riskName> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk name."@en .
+<http://www.uoc.edu/PEC2/med#riskName> <http://www.w3.org/2000/01/rdf-schema#label> "risk name"@en .
+# 
+# http://www.uoc.edu/PEC2/med#scope
+<http://www.uoc.edu/PEC2/med#scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#scope> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#scope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#scope> <http://www.w3.org/2000/01/rdf-schema#comment> "Scope value."@en .
+<http://www.uoc.edu/PEC2/med#scope> <http://www.w3.org/2000/01/rdf-schema#label> "scope"@en .
+# 
+# http://www.uoc.edu/PEC2/med#seriousness
+<http://www.uoc.edu/PEC2/med#seriousness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#seriousness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#seriousness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#seriousness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#seriousness> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident type value."@en .
+<http://www.uoc.edu/PEC2/med#seriousness> <http://www.w3.org/2000/01/rdf-schema#label> "seriousness"@en .
+# 
+# http://www.uoc.edu/PEC2/med#severity
+<http://www.uoc.edu/PEC2/med#severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#severity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#severity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#severity> <http://www.w3.org/2000/01/rdf-schema#comment> "Severity value."@en .
+<http://www.uoc.edu/PEC2/med#severity> <http://www.w3.org/2000/01/rdf-schema#label> "severity"@en .
+# 
+# http://www.uoc.edu/PEC2/med#typeName
+<http://www.uoc.edu/PEC2/med#typeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#typeName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#typeName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#typeName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#typeName> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type name."@en .
+<http://www.uoc.edu/PEC2/med#typeName> <http://www.w3.org/2000/01/rdf-schema#label> "type name"@en .
+# 
+# http://www.uoc.edu/PEC2/med#udiDi
+<http://www.uoc.edu/PEC2/med#udiDi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.uoc.edu/PEC2/med#udiDi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.uoc.edu/PEC2/med#udiDi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#udiDi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.uoc.edu/PEC2/med#udiDi> <http://www.w3.org/2000/01/rdf-schema#comment> "UDI-DI value."@en .
+<http://www.uoc.edu/PEC2/med#udiDi> <http://www.w3.org/2000/01/rdf-schema#label> "UDI-DI"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.uoc.edu/PEC2/med#ActiveDevice
+<http://www.uoc.edu/PEC2/med#ActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Active medical device."@en .
+<http://www.uoc.edu/PEC2/med#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Active Device"@en .
+# 
+# http://www.uoc.edu/PEC2/med#ActiveDeviceType
+<http://www.uoc.edu/PEC2/med#ActiveDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#ActiveDeviceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#ActiveDeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type class from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#ActiveDeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "Active Device Type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#ActiveImplantType
+<http://www.uoc.edu/PEC2/med#ActiveImplantType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#ActiveImplantType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#ActiveImplantType> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type class from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#ActiveImplantType> <http://www.w3.org/2000/01/rdf-schema#label> "Active Implant Type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#CompetentAuthority
+<http://www.uoc.edu/PEC2/med#CompetentAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#CompetentAuthority> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.uoc.edu/PEC2/med#CompetentAuthority> <http://www.w3.org/2000/01/rdf-schema#comment> "Authority from fabricantes.csv."@en .
+<http://www.uoc.edu/PEC2/med#CompetentAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "Competent Authority"@en .
+# 
+# http://www.uoc.edu/PEC2/med#Country
+<http://www.uoc.edu/PEC2/med#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.uoc.edu/PEC2/med#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "Country from the dataset."@en .
+<http://www.uoc.edu/PEC2/med#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+# 
+# http://www.uoc.edu/PEC2/med#DeviceType
+<http://www.uoc.edu/PEC2/med#DeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#DeviceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.uoc.edu/PEC2/med#DeviceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#typeName> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#DeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#DeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "Device Type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#FSCA
+<http://www.uoc.edu/PEC2/med#FSCA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#FSCA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.uoc.edu/PEC2/med#FSCA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#targetsDevice> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#FSCA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://www.uoc.edu/PEC2/med#CompetentAuthority> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#issuedBy> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#FSCA> <http://www.w3.org/2000/01/rdf-schema#comment> "FSCA from acciones_correctivas.csv."@en .
+<http://www.uoc.edu/PEC2/med#FSCA> <http://www.w3.org/2000/01/rdf-schema#label> "FSCA"@en .
+# 
+# http://www.uoc.edu/PEC2/med#HighRiskDevice
+<http://www.uoc.edu/PEC2/med#HighRiskDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "High risk medical device."@en .
+<http://www.uoc.edu/PEC2/med#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#label> "High Risk Device"@en .
+# 
+# http://www.uoc.edu/PEC2/med#IVDDevice
+<http://www.uoc.edu/PEC2/med#IVDDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#IVDDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#IVDDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "In vitro diagnostic device."@en .
+<http://www.uoc.edu/PEC2/med#IVDDevice> <http://www.w3.org/2000/01/rdf-schema#label> "IVD Device"@en .
+# 
+# http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType
+<http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type class from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Active Device Type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#ImplantableDevice
+<http://www.uoc.edu/PEC2/med#ImplantableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Implantable medical device."@en .
+<http://www.uoc.edu/PEC2/med#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Device"@en .
+# 
+# http://www.uoc.edu/PEC2/med#ImplantableDeviceType
+<http://www.uoc.edu/PEC2/med#ImplantableDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#ImplantableDeviceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#ImplantableDeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type class from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#ImplantableDeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Device Type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#InSituCorrectionFSCA
+<http://www.uoc.edu/PEC2/med#InSituCorrectionFSCA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#InSituCorrectionFSCA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#InSituCorrectionFSCA> <http://www.w3.org/2000/01/rdf-schema#comment> "In situ correction FSCA."@en .
+<http://www.uoc.edu/PEC2/med#InSituCorrectionFSCA> <http://www.w3.org/2000/01/rdf-schema#label> "In Situ Correction FSCA"@en .
+# 
+# http://www.uoc.edu/PEC2/med#InVitroDiagnosticDeviceType
+<http://www.uoc.edu/PEC2/med#InVitroDiagnosticDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#InVitroDiagnosticDeviceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#InVitroDiagnosticDeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type class from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#InVitroDiagnosticDeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "In Vitro Diagnostic Device Type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#Incident
+<http://www.uoc.edu/PEC2/med#Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.uoc.edu/PEC2/med#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.uoc.edu/PEC2/med#Risk> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#hasRisk> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#involvesDevice> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#Incident> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident from incidentes.csv."@en .
+<http://www.uoc.edu/PEC2/med#Incident> <http://www.w3.org/2000/01/rdf-schema#label> "Incident"@en .
+# 
+# http://www.uoc.edu/PEC2/med#ManagedIncident
+<http://www.uoc.edu/PEC2/med#ManagedIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#ManagedIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#ManagedIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident linked to an FSCA."@en .
+<http://www.uoc.edu/PEC2/med#ManagedIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Managed Incident"@en .
+# 
+# http://www.uoc.edu/PEC2/med#Manufacturer
+<http://www.uoc.edu/PEC2/med#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.uoc.edu/PEC2/med#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://www.uoc.edu/PEC2/med#Country> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#locatedIn> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://www.uoc.edu/PEC2/med#CompetentAuthority> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#regulatedBy> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturer from the dataset."@en .
+<http://www.uoc.edu/PEC2/med#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer"@en .
+# 
+# http://www.uoc.edu/PEC2/med#MedicalDevice
+<http://www.uoc.edu/PEC2/med#MedicalDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.uoc.edu/PEC2/med#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://www.uoc.edu/PEC2/med#DeviceType> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#hasDeviceType> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+_:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#hasManufacturer> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#deviceId> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.uoc.edu/PEC2/med#deviceName> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.uoc.edu/PEC2/med#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Medical device from the dataset."@en .
+<http://www.uoc.edu/PEC2/med#MedicalDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Device"@en .
+# 
+# http://www.uoc.edu/PEC2/med#NearMiss
+<http://www.uoc.edu/PEC2/med#NearMiss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#NearMiss> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#NearMiss> <http://www.w3.org/2000/01/rdf-schema#comment> "Near miss incident."@en .
+<http://www.uoc.edu/PEC2/med#NearMiss> <http://www.w3.org/2000/01/rdf-schema#label> "Near Miss"@en .
+# 
+# http://www.uoc.edu/PEC2/med#RecallFSCA
+<http://www.uoc.edu/PEC2/med#RecallFSCA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#RecallFSCA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#RecallFSCA> <http://www.w3.org/2000/01/rdf-schema#comment> "Recall FSCA."@en .
+<http://www.uoc.edu/PEC2/med#RecallFSCA> <http://www.w3.org/2000/01/rdf-schema#label> "Recall FSCA"@en .
+# 
+# http://www.uoc.edu/PEC2/med#RegulatedEconomicOperator
+<http://www.uoc.edu/PEC2/med#RegulatedEconomicOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#RegulatedEconomicOperator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#RegulatedEconomicOperator> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturer linked to an authority."@en .
+<http://www.uoc.edu/PEC2/med#RegulatedEconomicOperator> <http://www.w3.org/2000/01/rdf-schema#label> "Regulated Economic Operator"@en .
+# 
+# http://www.uoc.edu/PEC2/med#Risk
+<http://www.uoc.edu/PEC2/med#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.uoc.edu/PEC2/med#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk from riesgos.csv."@en .
+<http://www.uoc.edu/PEC2/med#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk"@en .
+# 
+# http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA
+<http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#FSCA> .
+<http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA> <http://www.w3.org/2000/01/rdf-schema#comment> "Safety notice FSCA."@en .
+<http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Notice FSCA"@en .
+# 
+# http://www.uoc.edu/PEC2/med#SelfTestDeviceType
+<http://www.uoc.edu/PEC2/med#SelfTestDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#SelfTestDeviceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#SelfTestDeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type class from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#SelfTestDeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "Self Test Device Type"@en .
+# 
+# http://www.uoc.edu/PEC2/med#SeriousIncident
+<http://www.uoc.edu/PEC2/med#SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#Incident> .
+<http://www.uoc.edu/PEC2/med#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Serious incident."@en .
+<http://www.uoc.edu/PEC2/med#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Serious Incident"@en .
+# 
+# http://www.uoc.edu/PEC2/med#SingleUseDeviceType
+<http://www.uoc.edu/PEC2/med#SingleUseDeviceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.uoc.edu/PEC2/med#SingleUseDeviceType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.uoc.edu/PEC2/med#DeviceType> .
+<http://www.uoc.edu/PEC2/med#SingleUseDeviceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type class from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#SingleUseDeviceType> <http://www.w3.org/2000/01/rdf-schema#label> "Single Use Device Type"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/Germany
+<http://dbpedia.org/resource/Germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Germany> <http://www.w3.org/2002/07/owl#sameAs> <http://www.uoc.edu/PEC2/med#germany> .
+# 
+# http://www.uoc.edu/PEC2/med#germany
+# 
+# http://dbpedia.org/resource/Ireland
+<http://dbpedia.org/resource/Ireland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Ireland> <http://www.w3.org/2002/07/owl#sameAs> <http://www.uoc.edu/PEC2/med#ireland> .
+# 
+# http://www.uoc.edu/PEC2/med#ireland
+# 
+# http://dbpedia.org/resource/Medtronic
+<http://dbpedia.org/resource/Medtronic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Medtronic> <http://www.w3.org/2002/07/owl#sameAs> <http://www.uoc.edu/PEC2/med#manufacturer_man001> .
+# 
+# http://www.uoc.edu/PEC2/med#manufacturer_man001
+# 
+# http://www.uoc.edu/PEC2/med#bfarm
+<http://www.uoc.edu/PEC2/med#bfarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#bfarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#CompetentAuthority> .
+<http://www.uoc.edu/PEC2/med#bfarm> <http://www.uoc.edu/PEC2/med#authorityName> "Bundesinstitut fuer Arzneimittel und Medizinprodukte BfArM" .
+<http://www.uoc.edu/PEC2/med#bfarm> <http://www.uoc.edu/PEC2/med#memberStateCode> "DE" .
+<http://www.uoc.edu/PEC2/med#bfarm> <http://www.w3.org/2000/01/rdf-schema#comment> "Authority from fabricantes.csv."@en .
+<http://www.uoc.edu/PEC2/med#bfarm> <http://www.w3.org/2000/01/rdf-schema#label> "BfArM"@en .
+# 
+# http://www.uoc.edu/PEC2/med#deviceType_activeDevice
+<http://www.uoc.edu/PEC2/med#deviceType_activeDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#deviceType_activeDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#ActiveDeviceType> .
+<http://www.uoc.edu/PEC2/med#deviceType_activeDevice> <http://www.uoc.edu/PEC2/med#typeName> "ActiveDevice" .
+<http://www.uoc.edu/PEC2/med#deviceType_activeDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#deviceType_activeDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Active Device"@en .
+# 
+# http://www.uoc.edu/PEC2/med#deviceType_activeImplant
+<http://www.uoc.edu/PEC2/med#deviceType_activeImplant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#deviceType_activeImplant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#ActiveImplantType> .
+<http://www.uoc.edu/PEC2/med#deviceType_activeImplant> <http://www.uoc.edu/PEC2/med#typeName> "ActiveImplant" .
+<http://www.uoc.edu/PEC2/med#deviceType_activeImplant> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#deviceType_activeImplant> <http://www.w3.org/2000/01/rdf-schema#label> "Active Implant"@en .
+# 
+# http://www.uoc.edu/PEC2/med#deviceType_implantableActive
+<http://www.uoc.edu/PEC2/med#deviceType_implantableActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#deviceType_implantableActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType> .
+<http://www.uoc.edu/PEC2/med#deviceType_implantableActive> <http://www.uoc.edu/PEC2/med#typeName> "ImplantableActiveDevice" .
+<http://www.uoc.edu/PEC2/med#deviceType_implantableActive> <http://www.w3.org/2000/01/rdf-schema#comment> "Device type from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#deviceType_implantableActive> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Active Device"@en .
+# 
+# http://www.uoc.edu/PEC2/med#device_dev001
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#ActiveDevice> .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#ImplantableDevice> .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.uoc.edu/PEC2/med#hasDeviceType> <http://www.uoc.edu/PEC2/med#deviceType_implantableActive> .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.uoc.edu/PEC2/med#hasManufacturer> <http://www.uoc.edu/PEC2/med#manufacturer_man001> .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.uoc.edu/PEC2/med#deviceId> "DEV-001" .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.uoc.edu/PEC2/med#deviceName> "HeartMate 3 LVAD" .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.uoc.edu/PEC2/med#isActive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.uoc.edu/PEC2/med#isImplantable> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.uoc.edu/PEC2/med#riskClass> "ClassIII" .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.uoc.edu/PEC2/med#udiDi> "0100380740009095" .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.w3.org/2000/01/rdf-schema#comment> "Device from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#device_dev001> <http://www.w3.org/2000/01/rdf-schema#label> "HeartMate 3 LVAD"@en .
+# 
+# http://www.uoc.edu/PEC2/med#device_dev023
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#ActiveDevice> .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#ImplantableDevice> .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#MedicalDevice> .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.uoc.edu/PEC2/med#hasDeviceType> <http://www.uoc.edu/PEC2/med#deviceType_activeImplant> .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.uoc.edu/PEC2/med#hasManufacturer> <http://www.uoc.edu/PEC2/med#manufacturer_man008> .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.uoc.edu/PEC2/med#deviceId> "DEV-023" .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.uoc.edu/PEC2/med#deviceName> "Tivoli II Cochlear Implant" .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.uoc.edu/PEC2/med#isActive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.uoc.edu/PEC2/med#isImplantable> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.uoc.edu/PEC2/med#riskClass> "ClassIII" .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.uoc.edu/PEC2/med#udiDi> "0104012099001023" .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.w3.org/2000/01/rdf-schema#comment> "Device from dispositivos.csv."@en .
+<http://www.uoc.edu/PEC2/med#device_dev023> <http://www.w3.org/2000/01/rdf-schema#label> "Tivoli II Cochlear Implant"@en .
+# 
+# http://www.uoc.edu/PEC2/med#fsca_fsca001
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA> .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.uoc.edu/PEC2/med#issuedBy> <http://www.uoc.edu/PEC2/med#hpra> .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.uoc.edu/PEC2/med#mitigatesRisk> <http://www.uoc.edu/PEC2/med#risk_rsk003> .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.uoc.edu/PEC2/med#targetsDevice> <http://www.uoc.edu/PEC2/med#device_dev001> .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.uoc.edu/PEC2/med#actionDate> "2024-02-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.uoc.edu/PEC2/med#actionType> "SafetyAlert" .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.uoc.edu/PEC2/med#fscaId> "FSCA-001" .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.uoc.edu/PEC2/med#scope> "All HeartMate 3 LVAD units implanted since 2020" .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.w3.org/2000/01/rdf-schema#comment> "FSCA from acciones_correctivas.csv."@en .
+<http://www.uoc.edu/PEC2/med#fsca_fsca001> <http://www.w3.org/2000/01/rdf-schema#label> "FSCA-001"@en .
+# 
+# http://www.uoc.edu/PEC2/med#germany
+<http://www.uoc.edu/PEC2/med#germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#Country> .
+<http://www.uoc.edu/PEC2/med#germany> <http://www.uoc.edu/PEC2/med#countryCode> "DE" .
+<http://www.uoc.edu/PEC2/med#germany> <http://www.w3.org/2000/01/rdf-schema#comment> "Country from the dataset."@en .
+<http://www.uoc.edu/PEC2/med#germany> <http://www.w3.org/2000/01/rdf-schema#label> "Germany"@en .
+# 
+# http://www.uoc.edu/PEC2/med#hpra
+<http://www.uoc.edu/PEC2/med#hpra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#hpra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#CompetentAuthority> .
+<http://www.uoc.edu/PEC2/med#hpra> <http://www.uoc.edu/PEC2/med#authorityName> "Health Products Regulatory Authority HPRA" .
+<http://www.uoc.edu/PEC2/med#hpra> <http://www.uoc.edu/PEC2/med#memberStateCode> "IE" .
+<http://www.uoc.edu/PEC2/med#hpra> <http://www.w3.org/2000/01/rdf-schema#comment> "Authority from fabricantes.csv."@en .
+<http://www.uoc.edu/PEC2/med#hpra> <http://www.w3.org/2000/01/rdf-schema#label> "Health Products Regulatory Authority"@en .
+# 
+# http://www.uoc.edu/PEC2/med#incident_inc001
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#SeriousIncident> .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.uoc.edu/PEC2/med#hasFSCA> <http://www.uoc.edu/PEC2/med#fsca_fsca001> .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.uoc.edu/PEC2/med#hasRisk> <http://www.uoc.edu/PEC2/med#risk_rsk003> .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.uoc.edu/PEC2/med#involvesDevice> <http://www.uoc.edu/PEC2/med#device_dev001> .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.uoc.edu/PEC2/med#reportedBy> <http://www.uoc.edu/PEC2/med#manufacturer_man001> .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.uoc.edu/PEC2/med#incidentId> "INC-001" .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.uoc.edu/PEC2/med#outcome> "Serious patient injury - embolic stroke" .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.uoc.edu/PEC2/med#reportDate> "2024-01-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.uoc.edu/PEC2/med#seriousness> "SeriousIncident" .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident from incidentes.csv."@en .
+<http://www.uoc.edu/PEC2/med#incident_inc001> <http://www.w3.org/2000/01/rdf-schema#label> "Incident INC-001"@en .
+# 
+# http://www.uoc.edu/PEC2/med#incident_inc019
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#NearMiss> .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.uoc.edu/PEC2/med#hasRisk> <http://www.uoc.edu/PEC2/med#risk_rsk001> .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.uoc.edu/PEC2/med#involvesDevice> <http://www.uoc.edu/PEC2/med#device_dev023> .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.uoc.edu/PEC2/med#reportedBy> <http://www.uoc.edu/PEC2/med#manufacturer_man008> .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.uoc.edu/PEC2/med#incidentId> "INC-019" .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.uoc.edu/PEC2/med#outcome> "Near-miss - device not activated post-surgery" .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.uoc.edu/PEC2/med#reportDate> "2024-10-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.uoc.edu/PEC2/med#seriousness> "NearMissIncident" .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident from incidentes.csv."@en .
+<http://www.uoc.edu/PEC2/med#incident_inc019> <http://www.w3.org/2000/01/rdf-schema#label> "Incident INC-019"@en .
+# 
+# http://www.uoc.edu/PEC2/med#ireland
+<http://www.uoc.edu/PEC2/med#ireland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#ireland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#Country> .
+<http://www.uoc.edu/PEC2/med#ireland> <http://www.uoc.edu/PEC2/med#countryCode> "IE" .
+<http://www.uoc.edu/PEC2/med#ireland> <http://www.w3.org/2000/01/rdf-schema#comment> "Country from the dataset."@en .
+<http://www.uoc.edu/PEC2/med#ireland> <http://www.w3.org/2000/01/rdf-schema#label> "Ireland"@en .
+# 
+# http://www.uoc.edu/PEC2/med#manufacturer_man001
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.uoc.edu/PEC2/med#locatedIn> <http://www.uoc.edu/PEC2/med#ireland> .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.uoc.edu/PEC2/med#regulatedBy> <http://www.uoc.edu/PEC2/med#hpra> .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.uoc.edu/PEC2/med#contactEmail> "regulatorymedtronic.com" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.uoc.edu/PEC2/med#countryName> "Ireland" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.uoc.edu/PEC2/med#eudamedSRN> "SRN-IE-MED-0001" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.uoc.edu/PEC2/med#manufacturerId> "MAN-001" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.uoc.edu/PEC2/med#name> "Medtronic plc" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturer from fabricantes.csv."@en .
+<http://www.uoc.edu/PEC2/med#manufacturer_man001> <http://www.w3.org/2000/01/rdf-schema#label> "Medtronic plc"@en .
+# 
+# http://www.uoc.edu/PEC2/med#manufacturer_man008
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#Manufacturer> .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.uoc.edu/PEC2/med#locatedIn> <http://www.uoc.edu/PEC2/med#germany> .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.uoc.edu/PEC2/med#regulatedBy> <http://www.uoc.edu/PEC2/med#bfarm> .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.uoc.edu/PEC2/med#contactEmail> "regulatorybiotronik.com" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.uoc.edu/PEC2/med#countryName> "Germany" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.uoc.edu/PEC2/med#eudamedSRN> "SRN-DE-MED-0008" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.uoc.edu/PEC2/med#manufacturerId> "MAN-008" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.uoc.edu/PEC2/med#name> "Biotronik SE Co. KG" .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturer from fabricantes.csv."@en .
+<http://www.uoc.edu/PEC2/med#manufacturer_man008> <http://www.w3.org/2000/01/rdf-schema#label> "Biotronik SE Co. KG"@en .
+# 
+# http://www.uoc.edu/PEC2/med#risk_rsk001
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.uoc.edu/PEC2/med#affectsDeviceType> <http://www.uoc.edu/PEC2/med#deviceType_activeDevice> .
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.uoc.edu/PEC2/med#imdrfCode> "A0101" .
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.uoc.edu/PEC2/med#probability> "Low" .
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.uoc.edu/PEC2/med#riskId> "RSK-001" .
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.uoc.edu/PEC2/med#riskName> "Device failure - electrical" .
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.uoc.edu/PEC2/med#severity> "Critical" .
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk from riesgos.csv."@en .
+<http://www.uoc.edu/PEC2/med#risk_rsk001> <http://www.w3.org/2000/01/rdf-schema#label> "Device failure - electrical"@en .
+# 
+# http://www.uoc.edu/PEC2/med#risk_rsk003
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.uoc.edu/PEC2/med#Risk> .
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.uoc.edu/PEC2/med#affectsDeviceType> <http://www.uoc.edu/PEC2/med#deviceType_implantableActive> .
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.uoc.edu/PEC2/med#imdrfCode> "A0201" .
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.uoc.edu/PEC2/med#probability> "Low" .
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.uoc.edu/PEC2/med#riskId> "RSK-003" .
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.uoc.edu/PEC2/med#riskName> "Thrombosis - device-related" .
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.uoc.edu/PEC2/med#severity> "Critical" .
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk from riesgos.csv."@en .
+<http://www.uoc.edu/PEC2/med#risk_rsk003> <http://www.w3.org/2000/01/rdf-schema#label> "Thrombosis - device-related"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description annotation property."@en .
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+# 
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#comment> "Title annotation property."@en .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en .
+# 
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "Preferred namespace prefix annotation property."@en .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#label> "preferred namespace prefix"@en .
+# 
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/2000/01/rdf-schema#comment> "Preferred namespace URI annotation property."@en .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/2000/01/rdf-schema#label> "preferred namespace URI"@en .
+# 
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "Version annotation property."@en .
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/2000/01/rdf-schema#label> "version info"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid12 <http://www.w3.org/2003/11/swrl#body> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> .
+_:genid14 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.uoc.edu/PEC2/med#ActiveDevice> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid16 .
+_:genid16 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> .
+_:genid16 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.uoc.edu/PEC2/med#ImplantableDevice> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid12 <http://www.w3.org/2003/11/swrl#head> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> .
+_:genid18 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.uoc.edu/PEC2/med#HighRiskDevice> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid19 <http://www.w3.org/2003/11/swrl#body> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid21 .
+_:genid21 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> .
+_:genid21 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.uoc.edu/PEC2/med#HighRiskDevice> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#d> .
+_:genid23 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid23 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.uoc.edu/PEC2/med#involvesDevice> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
+_:genid25 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid25 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.uoc.edu/PEC2/med#Incident> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid19 <http://www.w3.org/2003/11/swrl#head> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
+_:genid27 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid27 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.uoc.edu/PEC2/med#SeriousIncident> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid28 <http://www.w3.org/2003/11/swrl#body> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
+_:genid30 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#f> .
+_:genid30 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid30 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.uoc.edu/PEC2/med#hasFSCA> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid32 .
+_:genid32 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid32 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.uoc.edu/PEC2/med#Incident> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid28 <http://www.w3.org/2003/11/swrl#head> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid34 .
+_:genid34 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> .
+_:genid34 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.uoc.edu/PEC2/med#ManagedIncident> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

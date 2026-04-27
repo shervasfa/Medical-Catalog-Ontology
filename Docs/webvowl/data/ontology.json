@@ -1,0 +1,1842 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.uoc.edu/PEC2/med", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Medical Catalog Ontology"
+    },
+    "iri" : "http://www.uoc.edu/PEC2/med",
+    "version" : "1.2",
+    "description" : {
+      "en" : "Ontology for the medical device catalog"
+    },
+    "labels" : {
+      "en" : "Medical Catalog Ontology"
+    },
+    "comments" : {
+      "en" : "Ontology for devices, incidents, risks, manufacturers and FSCAs."
+    },
+    "other" : {
+      "createdWith" : [ {
+        "identifier" : "createdWith",
+        "language" : "undefined",
+        "value" : "https://chowlk.linkeddata.es/",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "med",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.2",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://www.uoc.edu/PEC2/med#",
+        "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Medical Catalog Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.uoc.edu/PEC2/med#ActiveDevice",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveDevice",
+      "en" : "Active Device"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#device_dev001",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Device from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "device_dev001",
+        "en" : "HeartMate 3 LVAD"
+      }
+    }, {
+      "iri" : "http://www.uoc.edu/PEC2/med#device_dev023",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Device from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "device_dev023",
+        "en" : "Tivoli II Cochlear Implant"
+      }
+    } ],
+    "comment" : {
+      "en" : "Active medical device."
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#Risk",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Risk",
+      "en" : "Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#risk_rsk001",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Risk from riesgos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "risk_rsk001",
+        "en" : "Device failure - electrical"
+      }
+    }, {
+      "iri" : "http://www.uoc.edu/PEC2/med#risk_rsk003",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Risk from riesgos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "risk_rsk003",
+        "en" : "Thrombosis - device-related"
+      }
+    } ],
+    "comment" : {
+      "en" : "Risk from riesgos.csv."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#FSCA",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FSCA",
+      "en" : "FSCA"
+    },
+    "subClasses" : [ "5", "6", "7" ],
+    "comment" : {
+      "en" : "FSCA from acciones_correctivas.csv."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#IVDDevice",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IVDDevice",
+      "en" : "IVD Device"
+    },
+    "comment" : {
+      "en" : "In vitro diagnostic device."
+    },
+    "id" : "10",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#ActiveDeviceType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveDeviceType",
+      "en" : "Active Device Type"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#deviceType_activeDevice",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Device type from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "deviceType_activeDevice",
+        "en" : "Active Device"
+      }
+    } ],
+    "comment" : {
+      "en" : "Device type class from dispositivos.csv."
+    },
+    "id" : "13",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#ImplantableDevice",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableDevice",
+      "en" : "Implantable Device"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#device_dev001",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Device from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "device_dev001",
+        "en" : "HeartMate 3 LVAD"
+      }
+    }, {
+      "iri" : "http://www.uoc.edu/PEC2/med#device_dev023",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Device from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "device_dev023",
+        "en" : "Tivoli II Cochlear Implant"
+      }
+    } ],
+    "comment" : {
+      "en" : "Implantable medical device."
+    },
+    "id" : "15",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#InSituCorrectionFSCA",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InSituCorrectionFSCA",
+      "en" : "In Situ Correction FSCA"
+    },
+    "comment" : {
+      "en" : "In situ correction FSCA."
+    },
+    "id" : "6",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#RegulatedEconomicOperator",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RegulatedEconomicOperator",
+      "en" : "Regulated Economic Operator"
+    },
+    "comment" : {
+      "en" : "Manufacturer linked to an authority."
+    },
+    "id" : "35",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "31",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "38",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#NearMiss",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NearMiss",
+      "en" : "Near Miss"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#incident_inc019",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Incident from incidentes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "incident_inc019",
+        "en" : "Incident INC-019"
+      }
+    } ],
+    "comment" : {
+      "en" : "Near miss incident."
+    },
+    "id" : "40",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#ManagedIncident",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ManagedIncident",
+      "en" : "Managed Incident"
+    },
+    "comment" : {
+      "en" : "Incident linked to an FSCA."
+    },
+    "id" : "45",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#MedicalDevice",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MedicalDevice",
+      "en" : "Medical Device"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#device_dev023",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Device from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "device_dev023",
+        "en" : "Tivoli II Cochlear Implant"
+      }
+    }, {
+      "iri" : "http://www.uoc.edu/PEC2/med#device_dev001",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Device from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "device_dev001",
+        "en" : "HeartMate 3 LVAD"
+      }
+    } ],
+    "subClasses" : [ "0", "15", "10", "51" ],
+    "comment" : {
+      "en" : "Medical device from the dataset."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#InVitroDiagnosticDeviceType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InVitroDiagnosticDeviceType",
+      "en" : "In Vitro Diagnostic Device Type"
+    },
+    "comment" : {
+      "en" : "Device type class from dispositivos.csv."
+    },
+    "id" : "58",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#Incident",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Incident",
+      "en" : "Incident"
+    },
+    "subClasses" : [ "45", "40", "70" ],
+    "comment" : {
+      "en" : "Incident from incidentes.csv."
+    },
+    "id" : "41"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#SelfTestDeviceType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SelfTestDeviceType",
+      "en" : "Self Test Device Type"
+    },
+    "comment" : {
+      "en" : "Device type class from dispositivos.csv."
+    },
+    "id" : "65",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#ActiveImplantType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveImplantType",
+      "en" : "Active Implant Type"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#deviceType_activeImplant",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Device type from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "deviceType_activeImplant",
+        "en" : "Active Implant"
+      }
+    } ],
+    "comment" : {
+      "en" : "Device type class from dispositivos.csv."
+    },
+    "id" : "63",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableActiveDeviceType",
+      "en" : "Implantable Active Device Type"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#deviceType_implantableActive",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Device type from dispositivos.csv."
+      },
+      "labels" : {
+        "IRI-based" : "deviceType_implantableActive",
+        "en" : "Implantable Active Device"
+      }
+    } ],
+    "comment" : {
+      "en" : "Device type class from dispositivos.csv."
+    },
+    "id" : "56",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#ImplantableDeviceType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableDeviceType",
+      "en" : "Implantable Device Type"
+    },
+    "comment" : {
+      "en" : "Device type class from dispositivos.csv."
+    },
+    "id" : "67",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#RecallFSCA",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecallFSCA",
+      "en" : "Recall FSCA"
+    },
+    "comment" : {
+      "en" : "Recall FSCA."
+    },
+    "id" : "5",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#Country",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "en" : "Country"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#germany",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Country from the dataset."
+      },
+      "labels" : {
+        "IRI-based" : "germany",
+        "en" : "Germany"
+      }
+    }, {
+      "iri" : "http://www.uoc.edu/PEC2/med#ireland",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Country from the dataset."
+      },
+      "labels" : {
+        "IRI-based" : "ireland",
+        "en" : "Ireland"
+      }
+    } ],
+    "comment" : {
+      "en" : "Country from the dataset."
+    },
+    "id" : "97"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#SeriousIncident",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeriousIncident",
+      "en" : "Serious Incident"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#incident_inc001",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Incident from incidentes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "incident_inc001",
+        "en" : "Incident INC-001"
+      }
+    } ],
+    "comment" : {
+      "en" : "Serious incident."
+    },
+    "id" : "70",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#HighRiskDevice",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighRiskDevice",
+      "en" : "High Risk Device"
+    },
+    "comment" : {
+      "en" : "High risk medical device."
+    },
+    "id" : "51",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#DeviceType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DeviceType",
+      "en" : "Device Type"
+    },
+    "subClasses" : [ "13", "63", "61", "67", "65", "58", "56" ],
+    "comment" : {
+      "en" : "Device type from dispositivos.csv."
+    },
+    "id" : "14"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#SingleUseDeviceType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleUseDeviceType",
+      "en" : "Single Use Device Type"
+    },
+    "comment" : {
+      "en" : "Device type class from dispositivos.csv."
+    },
+    "id" : "61",
+    "superClasses" : [ "14" ]
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#Manufacturer",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Manufacturer",
+      "en" : "Manufacturer"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#manufacturer_man008",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Manufacturer from fabricantes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "manufacturer_man008",
+        "en" : "Biotronik SE Co. KG"
+      }
+    }, {
+      "iri" : "http://www.uoc.edu/PEC2/med#manufacturer_man001",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Manufacturer from fabricantes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "manufacturer_man001",
+        "en" : "Medtronic plc"
+      }
+    } ],
+    "subClasses" : [ "35" ],
+    "comment" : {
+      "en" : "Manufacturer from the dataset."
+    },
+    "id" : "22"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "33",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "74",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "76",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "104",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "92",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#CompetentAuthority",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CompetentAuthority",
+      "en" : "Competent Authority"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#hpra",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Authority from fabricantes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "hpra",
+        "en" : "Health Products Regulatory Authority"
+      }
+    }, {
+      "iri" : "http://www.uoc.edu/PEC2/med#bfarm",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "Authority from fabricantes.csv."
+      },
+      "labels" : {
+        "IRI-based" : "bfarm",
+        "en" : "BfArM"
+      }
+    } ],
+    "comment" : {
+      "en" : "Authority from fabricantes.csv."
+    },
+    "id" : "30"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SafetyNoticeFSCA",
+      "en" : "Safety Notice FSCA"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.uoc.edu/PEC2/med#fsca_fsca001",
+      "baseIri" : "http://www.uoc.edu/PEC2/med",
+      "comment" : {
+        "en" : "FSCA from acciones_correctivas.csv."
+      },
+      "labels" : {
+        "IRI-based" : "fsca_fsca001",
+        "en" : "FSCA-001"
+      }
+    } ],
+    "comment" : {
+      "en" : "Safety notice FSCA."
+    },
+    "id" : "7",
+    "superClasses" : [ "4" ]
+  } ],
+  "property" : [ {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "105",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "107",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.uoc.edu/PEC2/med#scope",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "scope",
+      "en" : "scope"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Scope value."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#riskId",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "riskId",
+      "en" : "risk id"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Risk id."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#imdrfCode",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "imdrfCode",
+      "en" : "IMDRF code"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "IMDRF code value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#eudamedSRN",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "eudamedSRN",
+      "en" : "EUDAMED SRN"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "EUDAMED SRN value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#memberStateCode",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "memberStateCode",
+      "en" : "member state code"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "Member state code value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#actionDate",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "actionDate",
+      "en" : "action date"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Action date."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#targetsDevice",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "targetsDevice",
+      "en" : "targets device"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links an FSCA to a device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#hasFSCA",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasFSCA",
+      "en" : "has FSCA"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Links an incident to an FSCA."
+    },
+    "attributes" : [ "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#authorityName",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "authorityName",
+      "en" : "authority name"
+    },
+    "domain" : "30",
+    "comment" : {
+      "en" : "Authority name value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#riskName",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "riskName",
+      "en" : "risk name"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Risk name."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#hasRisk",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasRisk",
+      "en" : "has risk"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Links an incident to a risk."
+    },
+    "attributes" : [ "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#deviceId",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "deviceId",
+      "en" : "device id"
+    },
+    "cardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "en" : "Device id."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#isActive",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "isActive",
+      "en" : "is active"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Active flag."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "54"
+  }, {
+    "range" : "14",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "14",
+    "domain" : "58",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "22",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "range" : "14",
+    "domain" : "61",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "60"
+  }, {
+    "range" : "14",
+    "domain" : "63",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  }, {
+    "range" : "14",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "14",
+    "domain" : "67",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "range" : "14",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "range" : "41",
+    "domain" : "70",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#reportDate",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "reportDate",
+      "en" : "report date"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Report date."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#severity",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "severity",
+      "en" : "severity"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Severity value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#actionType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "actionType",
+      "en" : "action type"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Action type value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#contactEmail",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "contactEmail",
+      "en" : "contact email"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Contact email value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#fscaId",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "fscaId",
+      "en" : "FSCA id"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "FSCA id."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#hasManufacturer",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasManufacturer",
+      "en" : "has manufacturer"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a device to a manufacturer."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "78"
+  }, {
+    "range" : "41",
+    "domain" : "40",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "79"
+  }, {
+    "range" : "1",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "80"
+  }, {
+    "range" : "1",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#issuedBy",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "issuedBy",
+      "en" : "issued by"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links an FSCA to an authority."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#affectsDeviceType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "affectsDeviceType",
+      "en" : "affects device type"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Links a risk to a device type."
+    },
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "range" : "41",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#incidentId",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "incidentId",
+      "en" : "incident id"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Incident id."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "85"
+  }, {
+    "range" : "1",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "4",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "88"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "4",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#countryName",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "92",
+    "label" : {
+      "IRI-based" : "countryName",
+      "en" : "country name"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Country name value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#outcome",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "outcome",
+      "en" : "outcome"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Outcome value."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#typeName",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "typeName",
+      "en" : "type name"
+    },
+    "cardinality" : "1",
+    "domain" : "14",
+    "comment" : {
+      "en" : "Device type name."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#hasDeviceType",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasDeviceType",
+      "en" : "has device type"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a device to a device type."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#riskClass",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "riskClass",
+      "en" : "risk class"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Risk class of a device."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#probability",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "probability",
+      "en" : "probability"
+    },
+    "domain" : "3",
+    "comment" : {
+      "en" : "Probability value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#involvesDevice",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "involvesDevice",
+      "en" : "involves device"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Links an incident to a device."
+    },
+    "attributes" : [ "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#reportedBy",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "reportedBy",
+      "en" : "reported by"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Links an incident to a manufacturer."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#name",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Name value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#locatedIn",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "97",
+    "label" : {
+      "IRI-based" : "locatedIn",
+      "en" : "located in"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Links a manufacturer to a country."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#involvesDevice",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "involvesDevice",
+      "en" : "involves device"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Links an incident to a device."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#regulatedBy",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "regulatedBy",
+      "en" : "regulated by"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Links a manufacturer to an authority."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#targetsDevice",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "targetsDevice",
+      "en" : "targets device"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links an FSCA to a device."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#hasRisk",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "hasRisk",
+      "en" : "has risk"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Links an incident to a risk."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "107"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#manufacturerId",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "manufacturerId",
+      "en" : "manufacturer id"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Manufacturer id."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#isImplantable",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "isImplantable",
+      "en" : "is implantable"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Implantable flag."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#countryCode",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "104",
+    "label" : {
+      "IRI-based" : "countryCode",
+      "en" : "country code"
+    },
+    "domain" : "97",
+    "comment" : {
+      "en" : "Country code value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#mitigatesRisk",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "mitigatesRisk",
+      "en" : "mitigates risk"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links an FSCA to a risk."
+    },
+    "attributes" : [ "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#deviceName",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "deviceName",
+      "en" : "device name"
+    },
+    "cardinality" : "1",
+    "domain" : "1",
+    "comment" : {
+      "en" : "Device name."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#seriousness",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "seriousness",
+      "en" : "seriousness"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Incident type value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "113"
+  }, {
+    "iri" : "http://www.uoc.edu/PEC2/med#udiDi",
+    "baseIri" : "http://www.uoc.edu/PEC2/med",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "udiDi",
+      "en" : "UDI-DI"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "UDI-DI value."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "114"
+  } ]
+}

@@ -1,0 +1,977 @@
+@prefix : <http://www.uoc.edu/PEC2/med#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.uoc.edu/PEC2/med#> .
+
+<http://www.uoc.edu/PEC2/med> rdf:type owl:Ontology ;
+                               <http://purl.org/dc/terms/description> "Ontology for the medical device catalog"@en ;
+                               <http://purl.org/dc/terms/title> "Medical Catalog Ontology"@en ;
+                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "med" ;
+                               <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                               rdfs:comment "Ontology for devices, incidents, risks, manufacturers and FSCAs."@en ;
+                               rdfs:label "Medical Catalog Ontology"@en ;
+                               owl:versionInfo "1.2" ;
+                               <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.uoc.edu/PEC2/med#affectsDeviceType
+:affectsDeviceType rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Risk ;
+                   rdfs:range :DeviceType ;
+                   rdfs:comment "Links a risk to a device type."@en ;
+                   rdfs:label "affects device type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#hasDeviceType
+:hasDeviceType rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :MedicalDevice ;
+               rdfs:range :DeviceType ;
+               rdfs:comment "Links a device to a device type."@en ;
+               rdfs:label "has device type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#hasFSCA
+:hasFSCA rdf:type owl:ObjectProperty ;
+         rdfs:domain :Incident ;
+         rdfs:range :FSCA ;
+         rdfs:comment "Links an incident to an FSCA."@en ;
+         rdfs:label "has FSCA"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#hasManufacturer
+:hasManufacturer rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :MedicalDevice ;
+                 rdfs:range :Manufacturer ;
+                 rdfs:comment "Links a device to a manufacturer."@en ;
+                 rdfs:label "has manufacturer"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#hasRisk
+:hasRisk rdf:type owl:ObjectProperty ;
+         rdfs:domain :Incident ;
+         rdfs:range :Risk ;
+         rdfs:comment "Links an incident to a risk."@en ;
+         rdfs:label "has risk"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#involvesDevice
+:involvesDevice rdf:type owl:ObjectProperty ;
+                rdfs:domain :Incident ;
+                rdfs:range :MedicalDevice ;
+                rdfs:comment "Links an incident to a device."@en ;
+                rdfs:label "involves device"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#issuedBy
+:issuedBy rdf:type owl:ObjectProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :FSCA ;
+          rdfs:range :CompetentAuthority ;
+          rdfs:comment "Links an FSCA to an authority."@en ;
+          rdfs:label "issued by"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Manufacturer ;
+           rdfs:range :Country ;
+           rdfs:comment "Links a manufacturer to a country."@en ;
+           rdfs:label "located in"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#mitigatesRisk
+:mitigatesRisk rdf:type owl:ObjectProperty ;
+               rdfs:domain :FSCA ;
+               rdfs:range :Risk ;
+               rdfs:comment "Links an FSCA to a risk."@en ;
+               rdfs:label "mitigates risk"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#regulatedBy
+:regulatedBy rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Manufacturer ;
+             rdfs:range :CompetentAuthority ;
+             rdfs:comment "Links a manufacturer to an authority."@en ;
+             rdfs:label "regulated by"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#reportedBy
+:reportedBy rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Incident ;
+            rdfs:range :Manufacturer ;
+            rdfs:comment "Links an incident to a manufacturer."@en ;
+            rdfs:label "reported by"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#targetsDevice
+:targetsDevice rdf:type owl:ObjectProperty ;
+               rdfs:domain :FSCA ;
+               rdfs:range :MedicalDevice ;
+               rdfs:comment "Links an FSCA to a device."@en ;
+               rdfs:label "targets device"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.uoc.edu/PEC2/med#actionDate
+:actionDate rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :FSCA ;
+            rdfs:range xsd:date ;
+            rdfs:comment "Action date."@en ;
+            rdfs:label "action date"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#actionType
+:actionType rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :FSCA ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Action type value."@en ;
+            rdfs:label "action type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#authorityName
+:authorityName rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :CompetentAuthority ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Authority name value."@en ;
+               rdfs:label "authority name"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#contactEmail
+:contactEmail rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Manufacturer ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Contact email value."@en ;
+              rdfs:label "contact email"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#countryCode
+:countryCode rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Country ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Country code value."@en ;
+             rdfs:label "country code"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#countryName
+:countryName rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Manufacturer ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Country name value."@en ;
+             rdfs:label "country name"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#deviceId
+:deviceId rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :MedicalDevice ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Device id."@en ;
+          rdfs:label "device id"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#deviceName
+:deviceName rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :MedicalDevice ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Device name."@en ;
+            rdfs:label "device name"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#eudamedSRN
+:eudamedSRN rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Manufacturer ;
+            rdfs:range xsd:string ;
+            rdfs:comment "EUDAMED SRN value."@en ;
+            rdfs:label "EUDAMED SRN"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#fscaId
+:fscaId rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :FSCA ;
+        rdfs:range xsd:string ;
+        rdfs:comment "FSCA id."@en ;
+        rdfs:label "FSCA id"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#imdrfCode
+:imdrfCode rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :fscaId ;
+           rdf:type owl:FunctionalProperty ;
+           rdfs:domain :Risk ;
+           rdfs:range xsd:string ;
+           rdfs:comment "IMDRF code value."@en ;
+           rdfs:label "IMDRF code"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#incidentId
+:incidentId rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Incident ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Incident id."@en ;
+            rdfs:label "incident id"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#isActive
+:isActive rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :MedicalDevice ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "Active flag."@en ;
+          rdfs:label "is active"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#isImplantable
+:isImplantable rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :MedicalDevice ;
+               rdfs:range xsd:boolean ;
+               rdfs:comment "Implantable flag."@en ;
+               rdfs:label "is implantable"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#manufacturerId
+:manufacturerId rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :Manufacturer ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Manufacturer id."@en ;
+                rdfs:label "manufacturer id"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#memberStateCode
+:memberStateCode rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :CompetentAuthority ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Member state code value."@en ;
+                 rdfs:label "member state code"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf :memberStateCode ;
+      rdf:type owl:FunctionalProperty ;
+      rdfs:domain :Manufacturer ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Name value."@en ;
+      rdfs:label "name"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#outcome
+:outcome rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Incident ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Outcome value."@en ;
+         rdfs:label "outcome"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#probability
+:probability rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Risk ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Probability value."@en ;
+             rdfs:label "probability"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#reportDate
+:reportDate rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Incident ;
+            rdfs:range xsd:date ;
+            rdfs:comment "Report date."@en ;
+            rdfs:label "report date"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#riskClass
+:riskClass rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :MedicalDevice ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Risk class of a device."@en ;
+           rdfs:label "risk class"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#riskId
+:riskId rdf:type owl:DatatypeProperty ,
+                 owl:FunctionalProperty ;
+        rdfs:domain :Risk ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Risk id."@en ;
+        rdfs:label "risk id"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#riskName
+:riskName rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Risk ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Risk name."@en ;
+          rdfs:label "risk name"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#scope
+:scope rdf:type owl:DatatypeProperty ;
+       rdfs:domain :FSCA ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Scope value."@en ;
+       rdfs:label "scope"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#seriousness
+:seriousness rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :Incident ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Incident type value."@en ;
+             rdfs:label "seriousness"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#severity
+:severity rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :Risk ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Severity value."@en ;
+          rdfs:label "severity"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#typeName
+:typeName rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          rdfs:domain :DeviceType ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Device type name."@en ;
+          rdfs:label "type name"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#udiDi
+:udiDi rdf:type owl:DatatypeProperty ,
+                owl:FunctionalProperty ;
+       rdfs:domain :MedicalDevice ;
+       rdfs:range xsd:string ;
+       rdfs:comment "UDI-DI value."@en ;
+       rdfs:label "UDI-DI"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.uoc.edu/PEC2/med#ActiveDevice
+:ActiveDevice rdf:type owl:Class ;
+              rdfs:subClassOf :MedicalDevice ;
+              rdfs:comment "Active medical device."@en ;
+              rdfs:label "Active Device"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#ActiveDeviceType
+:ActiveDeviceType rdf:type owl:Class ;
+                  rdfs:subClassOf :DeviceType ;
+                  rdfs:comment "Device type class from dispositivos.csv."@en ;
+                  rdfs:label "Active Device Type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#ActiveImplantType
+:ActiveImplantType rdf:type owl:Class ;
+                   rdfs:subClassOf :DeviceType ;
+                   rdfs:comment "Device type class from dispositivos.csv."@en ;
+                   rdfs:label "Active Implant Type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#CompetentAuthority
+:CompetentAuthority rdf:type owl:Class ;
+                    rdfs:subClassOf owl:Thing ;
+                    rdfs:comment "Authority from fabricantes.csv."@en ;
+                    rdfs:label "Competent Authority"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:comment "Country from the dataset."@en ;
+         rdfs:label "Country"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#DeviceType
+:DeviceType rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :typeName ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ;
+            rdfs:comment "Device type from dispositivos.csv."@en ;
+            rdfs:label "Device Type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#FSCA
+:FSCA rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :targetsDevice ;
+                        owl:someValuesFrom :MedicalDevice
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :issuedBy ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :CompetentAuthority
+                      ] ;
+      rdfs:comment "FSCA from acciones_correctivas.csv."@en ;
+      rdfs:label "FSCA"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#HighRiskDevice
+:HighRiskDevice rdf:type owl:Class ;
+                rdfs:subClassOf :MedicalDevice ;
+                rdfs:comment "High risk medical device."@en ;
+                rdfs:label "High Risk Device"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#IVDDevice
+:IVDDevice rdf:type owl:Class ;
+           rdfs:subClassOf :MedicalDevice ;
+           rdfs:comment "In vitro diagnostic device."@en ;
+           rdfs:label "IVD Device"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#ImplantableActiveDeviceType
+:ImplantableActiveDeviceType rdf:type owl:Class ;
+                             rdfs:subClassOf :DeviceType ;
+                             rdfs:comment "Device type class from dispositivos.csv."@en ;
+                             rdfs:label "Implantable Active Device Type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#ImplantableDevice
+:ImplantableDevice rdf:type owl:Class ;
+                   rdfs:subClassOf :MedicalDevice ;
+                   rdfs:comment "Implantable medical device."@en ;
+                   rdfs:label "Implantable Device"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#ImplantableDeviceType
+:ImplantableDeviceType rdf:type owl:Class ;
+                       rdfs:subClassOf :DeviceType ;
+                       rdfs:comment "Device type class from dispositivos.csv."@en ;
+                       rdfs:label "Implantable Device Type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#InSituCorrectionFSCA
+:InSituCorrectionFSCA rdf:type owl:Class ;
+                      rdfs:subClassOf :FSCA ;
+                      rdfs:comment "In situ correction FSCA."@en ;
+                      rdfs:label "In Situ Correction FSCA"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#InVitroDiagnosticDeviceType
+:InVitroDiagnosticDeviceType rdf:type owl:Class ;
+                             rdfs:subClassOf :DeviceType ;
+                             rdfs:comment "Device type class from dispositivos.csv."@en ;
+                             rdfs:label "In Vitro Diagnostic Device Type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#Incident
+:Incident rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasRisk ;
+                            owl:someValuesFrom :Risk
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :involvesDevice ;
+                            owl:someValuesFrom :MedicalDevice
+                          ] ;
+          rdfs:comment "Incident from incidentes.csv."@en ;
+          rdfs:label "Incident"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#ManagedIncident
+:ManagedIncident rdf:type owl:Class ;
+                 rdfs:subClassOf :Incident ;
+                 rdfs:comment "Incident linked to an FSCA."@en ;
+                 rdfs:label "Managed Incident"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#Manufacturer
+:Manufacturer rdf:type owl:Class ;
+              rdfs:subClassOf owl:Thing ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :locatedIn ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :Country
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :regulatedBy ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :CompetentAuthority
+                              ] ;
+              rdfs:comment "Manufacturer from the dataset."@en ;
+              rdfs:label "Manufacturer"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#MedicalDevice
+:MedicalDevice rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasDeviceType ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :DeviceType
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasManufacturer ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Manufacturer
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :deviceId ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :deviceName ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
+               rdfs:comment "Medical device from the dataset."@en ;
+               rdfs:label "Medical Device"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#NearMiss
+:NearMiss rdf:type owl:Class ;
+          rdfs:subClassOf :Incident ;
+          rdfs:comment "Near miss incident."@en ;
+          rdfs:label "Near Miss"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#RecallFSCA
+:RecallFSCA rdf:type owl:Class ;
+            rdfs:subClassOf :FSCA ;
+            rdfs:comment "Recall FSCA."@en ;
+            rdfs:label "Recall FSCA"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#RegulatedEconomicOperator
+:RegulatedEconomicOperator rdf:type owl:Class ;
+                           rdfs:subClassOf :Manufacturer ;
+                           rdfs:comment "Manufacturer linked to an authority."@en ;
+                           rdfs:label "Regulated Economic Operator"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:comment "Risk from riesgos.csv."@en ;
+      rdfs:label "Risk"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#SafetyNoticeFSCA
+:SafetyNoticeFSCA rdf:type owl:Class ;
+                  rdfs:subClassOf :FSCA ;
+                  rdfs:comment "Safety notice FSCA."@en ;
+                  rdfs:label "Safety Notice FSCA"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#SelfTestDeviceType
+:SelfTestDeviceType rdf:type owl:Class ;
+                    rdfs:subClassOf :DeviceType ;
+                    rdfs:comment "Device type class from dispositivos.csv."@en ;
+                    rdfs:label "Self Test Device Type"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#SeriousIncident
+:SeriousIncident rdf:type owl:Class ;
+                 rdfs:subClassOf :Incident ;
+                 rdfs:comment "Serious incident."@en ;
+                 rdfs:label "Serious Incident"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#SingleUseDeviceType
+:SingleUseDeviceType rdf:type owl:Class ;
+                     rdfs:subClassOf :DeviceType ;
+                     rdfs:comment "Device type class from dispositivos.csv."@en ;
+                     rdfs:label "Single Use Device Type"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/Germany
+<http://dbpedia.org/resource/Germany> rdf:type owl:NamedIndividual ;
+                                      owl:sameAs :germany .
+
+
+###  http://www.uoc.edu/PEC2/med#germany
+
+###  http://dbpedia.org/resource/Ireland
+<http://dbpedia.org/resource/Ireland> rdf:type owl:NamedIndividual ;
+                                      owl:sameAs :ireland .
+
+
+###  http://www.uoc.edu/PEC2/med#ireland
+
+###  http://dbpedia.org/resource/Medtronic
+<http://dbpedia.org/resource/Medtronic> rdf:type owl:NamedIndividual ;
+                                        owl:sameAs :manufacturer_man001 .
+
+
+###  http://www.uoc.edu/PEC2/med#manufacturer_man001
+
+###  http://www.uoc.edu/PEC2/med#bfarm
+:bfarm rdf:type owl:NamedIndividual ,
+                :CompetentAuthority ;
+       :authorityName "Bundesinstitut fuer Arzneimittel und Medizinprodukte BfArM" ;
+       :memberStateCode "DE" ;
+       rdfs:comment "Authority from fabricantes.csv."@en ;
+       rdfs:label "BfArM"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#deviceType_activeDevice
+:deviceType_activeDevice rdf:type owl:NamedIndividual ,
+                                  :ActiveDeviceType ;
+                         :typeName "ActiveDevice" ;
+                         rdfs:comment "Device type from dispositivos.csv."@en ;
+                         rdfs:label "Active Device"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#deviceType_activeImplant
+:deviceType_activeImplant rdf:type owl:NamedIndividual ,
+                                   :ActiveImplantType ;
+                          :typeName "ActiveImplant" ;
+                          rdfs:comment "Device type from dispositivos.csv."@en ;
+                          rdfs:label "Active Implant"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#deviceType_implantableActive
+:deviceType_implantableActive rdf:type owl:NamedIndividual ,
+                                       :ImplantableActiveDeviceType ;
+                              :typeName "ImplantableActiveDevice" ;
+                              rdfs:comment "Device type from dispositivos.csv."@en ;
+                              rdfs:label "Implantable Active Device"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#device_dev001
+:device_dev001 rdf:type owl:NamedIndividual ,
+                        :ActiveDevice ,
+                        :ImplantableDevice ,
+                        :MedicalDevice ;
+               :hasDeviceType :deviceType_implantableActive ;
+               :hasManufacturer :manufacturer_man001 ;
+               :deviceId "DEV-001" ;
+               :deviceName "HeartMate 3 LVAD" ;
+               :isActive "true"^^xsd:boolean ;
+               :isImplantable "true"^^xsd:boolean ;
+               :riskClass "ClassIII" ;
+               :udiDi "0100380740009095" ;
+               rdfs:comment "Device from dispositivos.csv."@en ;
+               rdfs:label "HeartMate 3 LVAD"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#device_dev023
+:device_dev023 rdf:type owl:NamedIndividual ,
+                        :ActiveDevice ,
+                        :ImplantableDevice ,
+                        :MedicalDevice ;
+               :hasDeviceType :deviceType_activeImplant ;
+               :hasManufacturer :manufacturer_man008 ;
+               :deviceId "DEV-023" ;
+               :deviceName "Tivoli II Cochlear Implant" ;
+               :isActive "true"^^xsd:boolean ;
+               :isImplantable "true"^^xsd:boolean ;
+               :riskClass "ClassIII" ;
+               :udiDi "0104012099001023" ;
+               rdfs:comment "Device from dispositivos.csv."@en ;
+               rdfs:label "Tivoli II Cochlear Implant"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#fsca_fsca001
+:fsca_fsca001 rdf:type owl:NamedIndividual ,
+                       :SafetyNoticeFSCA ;
+              :issuedBy :hpra ;
+              :mitigatesRisk :risk_rsk003 ;
+              :targetsDevice :device_dev001 ;
+              :actionDate "2024-02-01"^^xsd:date ;
+              :actionType "SafetyAlert" ;
+              :fscaId "FSCA-001" ;
+              :scope "All HeartMate 3 LVAD units implanted since 2020" ;
+              rdfs:comment "FSCA from acciones_correctivas.csv."@en ;
+              rdfs:label "FSCA-001"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#germany
+:germany rdf:type owl:NamedIndividual ,
+                  :Country ;
+         :countryCode "DE" ;
+         rdfs:comment "Country from the dataset."@en ;
+         rdfs:label "Germany"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#hpra
+:hpra rdf:type owl:NamedIndividual ,
+               :CompetentAuthority ;
+      :authorityName "Health Products Regulatory Authority HPRA" ;
+      :memberStateCode "IE" ;
+      rdfs:comment "Authority from fabricantes.csv."@en ;
+      rdfs:label "Health Products Regulatory Authority"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#incident_inc001
+:incident_inc001 rdf:type owl:NamedIndividual ,
+                          :SeriousIncident ;
+                 :hasFSCA :fsca_fsca001 ;
+                 :hasRisk :risk_rsk003 ;
+                 :involvesDevice :device_dev001 ;
+                 :reportedBy :manufacturer_man001 ;
+                 :incidentId "INC-001" ;
+                 :outcome "Serious patient injury - embolic stroke" ;
+                 :reportDate "2024-01-15"^^xsd:date ;
+                 :seriousness "SeriousIncident" ;
+                 rdfs:comment "Incident from incidentes.csv."@en ;
+                 rdfs:label "Incident INC-001"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#incident_inc019
+:incident_inc019 rdf:type owl:NamedIndividual ,
+                          :NearMiss ;
+                 :hasRisk :risk_rsk001 ;
+                 :involvesDevice :device_dev023 ;
+                 :reportedBy :manufacturer_man008 ;
+                 :incidentId "INC-019" ;
+                 :outcome "Near-miss - device not activated post-surgery" ;
+                 :reportDate "2024-10-01"^^xsd:date ;
+                 :seriousness "NearMissIncident" ;
+                 rdfs:comment "Incident from incidentes.csv."@en ;
+                 rdfs:label "Incident INC-019"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#ireland
+:ireland rdf:type owl:NamedIndividual ,
+                  :Country ;
+         :countryCode "IE" ;
+         rdfs:comment "Country from the dataset."@en ;
+         rdfs:label "Ireland"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#manufacturer_man001
+:manufacturer_man001 rdf:type owl:NamedIndividual ,
+                              :Manufacturer ;
+                     :locatedIn :ireland ;
+                     :regulatedBy :hpra ;
+                     :contactEmail "regulatorymedtronic.com" ;
+                     :countryName "Ireland" ;
+                     :eudamedSRN "SRN-IE-MED-0001" ;
+                     :manufacturerId "MAN-001" ;
+                     :name "Medtronic plc" ;
+                     rdfs:comment "Manufacturer from fabricantes.csv."@en ;
+                     rdfs:label "Medtronic plc"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#manufacturer_man008
+:manufacturer_man008 rdf:type owl:NamedIndividual ,
+                              :Manufacturer ;
+                     :locatedIn :germany ;
+                     :regulatedBy :bfarm ;
+                     :contactEmail "regulatorybiotronik.com" ;
+                     :countryName "Germany" ;
+                     :eudamedSRN "SRN-DE-MED-0008" ;
+                     :manufacturerId "MAN-008" ;
+                     :name "Biotronik SE Co. KG" ;
+                     rdfs:comment "Manufacturer from fabricantes.csv."@en ;
+                     rdfs:label "Biotronik SE Co. KG"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#risk_rsk001
+:risk_rsk001 rdf:type owl:NamedIndividual ,
+                      :Risk ;
+             :affectsDeviceType :deviceType_activeDevice ;
+             :imdrfCode "A0101" ;
+             :probability "Low" ;
+             :riskId "RSK-001" ;
+             :riskName "Device failure - electrical" ;
+             :severity "Critical" ;
+             rdfs:comment "Risk from riesgos.csv."@en ;
+             rdfs:label "Device failure - electrical"@en .
+
+
+###  http://www.uoc.edu/PEC2/med#risk_rsk003
+:risk_rsk003 rdf:type owl:NamedIndividual ,
+                      :Risk ;
+             :affectsDeviceType :deviceType_implantableActive ;
+             :imdrfCode "A0201" ;
+             :probability "Low" ;
+             :riskId "RSK-003" ;
+             :riskName "Thrombosis - device-related" ;
+             :severity "Critical" ;
+             rdfs:comment "Risk from riesgos.csv."@en ;
+             rdfs:label "Thrombosis - device-related"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/description> rdfs:comment "Description annotation property."@en ;
+                                       rdfs:label "description"@en .
+
+
+<http://purl.org/dc/terms/title> rdfs:comment "Title annotation property."@en ;
+                                 rdfs:label "title"@en .
+
+
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdfs:comment "Preferred namespace prefix annotation property."@en ;
+                                                      rdfs:label "preferred namespace prefix"@en .
+
+
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdfs:comment "Preferred namespace URI annotation property."@en ;
+                                                   rdfs:label "preferred namespace URI"@en .
+
+
+owl:versionInfo rdfs:comment "Version annotation property."@en ;
+                rdfs:label "version info"@en .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#i> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#f> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ImplantableDevice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :ActiveDevice ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighRiskDevice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Incident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :involvesDevice ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#d>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :HighRiskDevice ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :SeriousIncident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Incident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasFSCA ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#f>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ManagedIncident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
